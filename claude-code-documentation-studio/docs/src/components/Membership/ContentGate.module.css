@@ -1,0 +1,107 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+  color: var(--terminal-text-secondary);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--terminal-border-primary);
+  border-top-color: var(--terminal-text-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  min-height: 50vh;
+  background: var(--terminal-bg-elevated);
+  border: 2px solid var(--terminal-border-primary);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.lockIcon {
+  color: var(--terminal-text-accent);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.gate h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--terminal-text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.gate p {
+  font-size: 1.125rem;
+  color: var(--terminal-text-secondary);
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+}
+
+.upgradeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--terminal-text-accent);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.upgradeButton:hover {
+  background: #fb923c;
+  transform: translateY(-2px);
+  box-shadow: var(--terminal-shadow-accent);
+  text-decoration: none;
+  color: #000;
+}
+
+.upgradeButton svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .gate {
+    padding: 3rem 1.5rem;
+    margin: 1rem;
+  }
+
+  .gate h2 {
+    font-size: 1.5rem;
+  }
+
+  .gate p {
+    font-size: 1rem;
+  }
+
+  .lockIcon svg {
+    width: 40px;
+    height: 40px;
+  }
+}

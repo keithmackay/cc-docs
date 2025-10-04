@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+  padding: 3rem 2rem;
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  background: var(--terminal-bg-secondary);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.2rem;
+  color: var(--terminal-text-secondary);
+}
+
+.notAuthenticated {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.notAuthenticated h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--terminal-text-primary);
+}
+
+.notAuthenticated p {
+  margin-bottom: 2rem;
+  color: var(--terminal-text-secondary);
+  font-size: 1.125rem;
+}
+
+.signInButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--terminal-text-accent);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.signInButton:hover {
+  background: #fb923c;
+  transform: translateY(-2px);
+  box-shadow: var(--terminal-shadow-accent);
+}
+
+.signInButton svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .notAuthenticated h1 {
+    font-size: 2rem;
+  }
+}

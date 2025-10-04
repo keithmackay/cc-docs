@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+moduleId: hooks
 ---
 
 # Discord Notification Hook

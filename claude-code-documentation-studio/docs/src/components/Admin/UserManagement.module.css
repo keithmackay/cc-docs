@@ -1,0 +1,340 @@
+.container {
+  width: 100%;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+  color: var(--terminal-text-secondary);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--terminal-border-primary);
+  border-top-color: var(--terminal-text-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--terminal-border-primary);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--terminal-text-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.header p {
+  font-size: 1rem;
+  color: var(--terminal-text-secondary);
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 1.5rem;
+  background: var(--terminal-bg-tertiary);
+  border: 1px solid var(--terminal-border-primary);
+  border-radius: 8px;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--terminal-text-accent);
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: var(--terminal-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  background: var(--terminal-bg-secondary);
+  border: 2px solid var(--terminal-border-primary);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.searchBar svg {
+  color: var(--terminal-text-secondary);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--terminal-text-primary);
+  font-family: inherit;
+}
+
+.searchInput::placeholder {
+  color: var(--terminal-text-secondary);
+}
+
+.table {
+  background: var(--terminal-bg-secondary);
+  border: 1px solid var(--terminal-border-primary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--terminal-bg-tertiary);
+  border-bottom: 2px solid var(--terminal-border-primary);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--terminal-text-secondary);
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--terminal-border-primary);
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.tableRow:hover {
+  background: var(--terminal-bg-tertiary);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border: 2px solid var(--terminal-border-primary);
+  object-fit: cover;
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.userName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--terminal-text-primary);
+}
+
+.userEmail {
+  font-size: 0.875rem;
+  color: var(--terminal-text-secondary);
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.planBadge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.planBadge.free {
+  background: rgba(156, 163, 175, 0.2);
+  color: var(--terminal-text-secondary);
+  border: 1px solid var(--terminal-border-primary);
+}
+
+.planBadge.pro {
+  background: rgba(249, 115, 22, 0.2);
+  color: var(--terminal-text-accent);
+  border: 1px solid var(--terminal-text-accent);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statusBadge.active {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--terminal-text-success);
+  border: 1px solid var(--terminal-text-success);
+}
+
+.statusBadge.cancelled,
+.statusBadge.expired {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--terminal-text-error);
+  border: 1px solid var(--terminal-text-error);
+}
+
+.viewButton {
+  padding: 0.5rem 1rem;
+  background: var(--terminal-text-accent);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.viewButton:hover {
+  background: #fb923c;
+  transform: translateY(-1px);
+}
+
+.emptyState {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--terminal-text-secondary);
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1200px) {
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  .columnDate {
+    display: none;
+  }
+}
+
+@media (max-width: 968px) {
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .columnStatus {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .tableRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .columnUser {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--terminal-border-primary);
+  }
+
+  .columnPlan,
+  .columnStatus,
+  .columnDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .columnPlan::before {
+    content: 'Plan:';
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--terminal-text-secondary);
+  }
+
+  .columnStatus::before {
+    content: 'Status:';
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--terminal-text-secondary);
+  }
+
+  .columnDate::before {
+    content: 'Joined:';
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--terminal-text-secondary);
+  }
+
+  .columnActions {
+    padding-top: 1rem;
+    border-top: 1px solid var(--terminal-border-primary);
+  }
+
+  .viewButton {
+    width: 100%;
+  }
+}

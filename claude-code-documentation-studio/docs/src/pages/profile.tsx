@@ -1,11 +1,13 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import { useAuth } from '../contexts/AuthContext';
+import { useMembership } from '../contexts/MembershipContext';
 import UserProgressDashboard from '../components/Progress/UserProgressDashboard';
 import styles from './profile.module.css';
 
 export default function Profile() {
   const { user, loading, signInWithGitHub } = useAuth();
+  const { currentMembership, loading: membershipLoading } = useMembership();
 
   if (loading) {
     return (
@@ -71,6 +73,61 @@ export default function Profile() {
               </div>
 
               <div className={styles.profileInfo}>
+                {/* Membership Section */}
+                <div className={styles.infoSection}>
+                  <h2>Membership</h2>
+                  {membershipLoading ? (
+                    <div className={styles.membershipLoading}>Loading membership...</div>
+                  ) : currentMembership ? (
+                    <div className={styles.membershipCard}>
+                      <div className={styles.membershipHeader}>
+                        <div className={styles.planBadge}>
+                          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.87-.96-7-5.54-7-10V8.3l7-3.11 7 3.11V10c0 4.46-3.13 9.04-7 10z"/>
+                          </svg>
+                          <span>{currentMembership.plan.display_name}</span>
+                        </div>
+                        <span className={`${styles.statusBadge} ${styles[currentMembership.status]}`}>
+                          {currentMembership.status}
+                        </span>
+                      </div>
+
+                      <div className={styles.membershipDetails}>
+                        {currentMembership.plan.name !== 'free' && (
+                          <>
+                            <div className={styles.detailItem}>
+                              <span className={styles.detailLabel}>Billing Cycle</span>
+                              <span className={styles.detailValue}>{currentMembership.billing_cycle}</span>
+                            </div>
+                            {currentMembership.expires_at && (
+                              <div className={styles.detailItem}>
+                                <span className={styles.detailLabel}>Next Billing</span>
+                                <span className={styles.detailValue}>
+                                  {new Date(currentMembership.expires_at).toLocaleDateString()}
+                                </span>
+                              </div>
+                            )}
+                          </>
+                        )}
+                      </div>
+
+                      <a href="/membership" className={styles.manageMembershipButton}>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                          <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                        </svg>
+                        Manage Membership
+                      </a>
+                    </div>
+                  ) : (
+                    <div className={styles.noMembership}>
+                      <p>No membership found</p>
+                      <a href="/membership" className={styles.manageMembershipButton}>
+                        View Plans
+                      </a>
+                    </div>
+                  )}
+                </div>
+
                 <div className={styles.infoSection}>
                   <h2>Account Information</h2>
                   <div className={styles.infoGrid}>

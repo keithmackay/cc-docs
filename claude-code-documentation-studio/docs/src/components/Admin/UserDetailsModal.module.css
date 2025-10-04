@@ -1,0 +1,356 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--terminal-bg-elevated);
+  border: 2px solid var(--terminal-border-primary);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--terminal-shadow-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid var(--terminal-border-primary);
+  background: var(--terminal-bg-tertiary);
+}
+
+.header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--terminal-text-primary);
+  margin: 0;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--terminal-border-primary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--terminal-text-secondary);
+}
+
+.closeButton:hover {
+  background: var(--terminal-text-error);
+  border-color: var(--terminal-text-error);
+  color: #000;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--terminal-bg-secondary);
+  border: 1px solid var(--terminal-border-primary);
+  border-radius: 8px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--terminal-text-accent);
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--terminal-border-primary);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--terminal-border-primary);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sectionHeader h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.userInfo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  border: 2px solid var(--terminal-border-accent);
+  object-fit: cover;
+}
+
+.userDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.membershipInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--terminal-text-secondary);
+  min-width: 120px;
+}
+
+.value {
+  font-size: 1rem;
+  color: var(--terminal-text-primary);
+  font-weight: 500;
+}
+
+.planBadge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.planBadge.free {
+  background: rgba(156, 163, 175, 0.2);
+  color: var(--terminal-text-secondary);
+  border: 1px solid var(--terminal-border-primary);
+}
+
+.planBadge.pro {
+  background: rgba(249, 115, 22, 0.2);
+  color: var(--terminal-text-accent);
+  border: 1px solid var(--terminal-text-accent);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statusBadge.active {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--terminal-text-success);
+  border: 1px solid var(--terminal-text-success);
+}
+
+.statusBadge.cancelled,
+.statusBadge.expired {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--terminal-text-error);
+  border: 1px solid var(--terminal-text-error);
+}
+
+.overallProgress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.progressLabel {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--terminal-text-secondary);
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background: var(--terminal-bg-tertiary);
+  border: 1px solid var(--terminal-border-primary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--terminal-text-accent) 0%, #fb923c 100%);
+  transition: width 0.3s ease;
+}
+
+.progressValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--terminal-text-accent);
+  min-width: 50px;
+  text-align: right;
+}
+
+.progressList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.progressItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--terminal-bg-tertiary);
+  border: 1px solid var(--terminal-border-primary);
+  border-radius: 6px;
+}
+
+.progressItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sectionName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--terminal-text-primary);
+}
+
+.progressPercent {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--terminal-text-accent);
+}
+
+.lastVisited {
+  font-size: 0.875rem;
+  color: var(--terminal-text-secondary);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  gap: 1rem;
+  color: var(--terminal-text-secondary);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--terminal-border-primary);
+  border-top-color: var(--terminal-text-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.emptyState {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--terminal-text-secondary);
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .section {
+    padding: 1.25rem;
+  }
+
+  .userInfo {
+    flex-direction: column;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .detailRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .label {
+    min-width: auto;
+  }
+
+  .overallProgress {
+    min-width: 100%;
+  }
+}

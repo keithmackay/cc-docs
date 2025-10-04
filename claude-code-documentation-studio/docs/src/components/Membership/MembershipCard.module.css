@@ -1,0 +1,189 @@
+.card {
+  background: var(--terminal-bg-elevated);
+  border: 2px solid var(--terminal-border-primary);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--terminal-border-secondary);
+  transform: translateY(-4px);
+  box-shadow: var(--terminal-shadow-md);
+}
+
+.proPlan {
+  border-color: var(--terminal-text-accent);
+  box-shadow: 0 0 0 1px var(--terminal-text-accent);
+}
+
+.proPlan:hover {
+  box-shadow: var(--terminal-shadow-accent);
+}
+
+.currentPlan {
+  border-color: var(--terminal-text-success);
+  background: linear-gradient(135deg, var(--terminal-bg-elevated) 0%, rgba(16, 185, 129, 0.05) 100%);
+}
+
+.popularBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--terminal-text-accent);
+  color: #000;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.planName {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--terminal-text-primary);
+  margin: 0;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--terminal-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--terminal-border-primary);
+  border-bottom: 1px solid var(--terminal-border-primary);
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--terminal-text-primary);
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--terminal-text-primary);
+  line-height: 1;
+}
+
+.period {
+  font-size: 1rem;
+  color: var(--terminal-text-secondary);
+}
+
+.yearlyPrice {
+  font-size: 0.9rem;
+  color: var(--terminal-text-secondary);
+}
+
+.savings {
+  color: var(--terminal-text-success);
+  font-weight: 600;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--terminal-text-primary);
+  font-size: 0.95rem;
+}
+
+.feature svg {
+  flex-shrink: 0;
+  color: var(--terminal-text-success);
+  margin-top: 0.125rem;
+}
+
+.action {
+  margin-top: auto;
+}
+
+.upgradeButton,
+.currentButton {
+  width: 100%;
+  padding: 0.875rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid;
+}
+
+.upgradeButton {
+  background: var(--terminal-text-accent);
+  border-color: var(--terminal-text-accent);
+  color: #000;
+}
+
+.upgradeButton:hover {
+  background: #fb923c;
+  border-color: #fb923c;
+  transform: translateY(-2px);
+  box-shadow: var(--terminal-shadow-accent);
+}
+
+.currentButton {
+  background: var(--terminal-bg-tertiary);
+  border-color: var(--terminal-text-success);
+  color: var(--terminal-text-success);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .planName {
+    font-size: 1.5rem;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+  }
+
+  .popularBadge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
