@@ -38,8 +38,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const signInWithGitHub = async () => {
-    // Get the current origin (works in both dev and prod)
-    const redirectUrl = `${window.location.origin}/auth/callback`;
+    // Force production URL in production environment
+    const isProduction = window.location.hostname !== 'localhost';
+    const redirectUrl = isProduction
+      ? 'https://claudecodeacademy.vercel.app/auth/callback'
+      : `${window.location.origin}/auth/callback`;
+
+    console.log('Environment:', isProduction ? 'PRODUCTION' : 'DEVELOPMENT');
     console.log('Redirect URL:', redirectUrl);
 
     const { error } = await supabase.auth.signInWithOAuth({
