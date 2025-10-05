@@ -19,15 +19,15 @@ const FeatureList: FeatureItem[] = [
     description: 'Foundation Concepts',
     details: 'Learn the fundamentals of Claude Code subagents and how specialized agents work in your development workflow.',
     gradient: 'linear-gradient(135deg, #1a1a1a 0%, #d97706 100%)',
-    link: '/docs/category/getting-started',
+    link: '/docs/subagents/overview',
     type: 'Beginner'
   },
   {
-    title: 'Output Styles',
-    description: 'Customization & Formatting',
-    details: 'Master custom output formatting and create personalized response styles for your Claude Code interactions.',
+    title: 'Docusaurus Expert',
+    description: 'Specialized Agent',
+    details: 'Master the documentation specialist agent and automate your Docusaurus documentation workflows.',
     gradient: 'linear-gradient(135deg, #2d2d2d 0%, #ea580c 100%)',
-    link: '/docs/category/build-with-claude-code',
+    link: '/docs/subagents/docusaurus-expert',
     type: 'Beginner'
   },
   {
@@ -35,32 +35,32 @@ const FeatureList: FeatureItem[] = [
     description: 'Event-Driven Automation',
     details: 'Create powerful hooks that respond to Claude Code events and automate your development workflows.',
     gradient: 'linear-gradient(135deg, #374151 0%, #f59e0b 100%)',
-    link: '/docs/category/build-with-claude-code',
+    link: '/docs/hooks/overview',
     type: 'Intermediate'
   },
   {
-    title: 'MCP Servers',
-    description: 'Advanced Integration',
-    details: 'Build and integrate Model Context Protocol servers to extend Claude Code capabilities with custom tools.',
+    title: 'Discord Notifications',
+    description: 'Team Communication',
+    details: 'Build a Discord notification system to send real-time updates to your team when agents complete tasks.',
     gradient: 'linear-gradient(135deg, #4b5563 0%, #fbbf24 100%)',
-    link: '/docs/category/build-with-claude-code',
+    link: '/docs/hooks/discord-notification-hook',
     type: 'Intermediate'
   },
   {
-    title: 'GitHub Actions',
-    description: 'CI/CD Automation',
-    details: 'Integrate Claude Code into your CI/CD pipeline with GitHub Actions for automated workflows.',
+    title: 'CI/CD Workflow',
+    description: 'Complete Integration',
+    details: 'Combine everything into a production-ready CI/CD pipeline with GitHub Actions automation.',
     gradient: 'linear-gradient(135deg, #1e293b 0%, #10b981 100%)',
-    link: '/docs/category/build-with-claude-code',
+    link: '/docs/workflows/cicd-workflow',
     type: 'Advanced'
   },
   {
-    title: 'Production Deployment',
-    description: 'Enterprise Scale',
-    details: 'Deploy Claude Code in production environments with Amazon Bedrock, Vertex AI, and enterprise security.',
+    title: 'Getting Started',
+    description: 'Introduction',
+    details: 'Start your journey with Claude Code and learn the basics to get up and running quickly.',
     gradient: 'linear-gradient(135deg, #0f172a 0%, #06b6d4 100%)',
-    link: '/docs/category/deployment',
-    type: 'Advanced'
+    link: '/docs/intro',
+    type: 'Beginner'
   },
 ];
 
