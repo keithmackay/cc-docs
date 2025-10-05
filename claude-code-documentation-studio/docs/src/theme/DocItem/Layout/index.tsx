@@ -45,7 +45,7 @@ export default function DocItemLayout({children}: Props): ReactNode {
   const {metadata, frontMatter} = useDoc();
 
   // Extract course and module from frontmatter or metadata
-  const courseId = frontMatter.courseId || 'claude-code';
+  const courseId = frontMatter.courseId || 'docs';
   const moduleId = frontMatter.moduleId;
 
   const content = (
@@ -68,14 +68,11 @@ export default function DocItemLayout({children}: Props): ReactNode {
     </div>
   );
 
-  // Only apply ContentGate if moduleId is specified
-  if (moduleId) {
-    return (
-      <ContentGate courseId={courseId} moduleId={moduleId}>
-        {content}
-      </ContentGate>
-    );
-  }
-
-  return content;
+  // All docs content requires at least Free plan (user must be logged in)
+  // ContentGate will show sign-in prompt if not logged in
+  return (
+    <ContentGate courseId={courseId} moduleId={moduleId}>
+      {content}
+    </ContentGate>
+  );
 }

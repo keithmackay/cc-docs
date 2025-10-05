@@ -17,42 +17,50 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Subagents',
     description: 'Foundation Concepts',
-    details: 'Learn the fundamentals of Claude Code subagents. Understand how specialized agents work, their capabilities, and how to configure them for your projects.',
-    gradient: 'linear-gradient(135deg, #1a1a1a 0%, #f97316 100%)',
-    link: '/docs/subagents/overview',
-    type: 'Module 1'
+    details: 'Learn the fundamentals of Claude Code subagents and how specialized agents work in your development workflow.',
+    gradient: 'linear-gradient(135deg, #1a1a1a 0%, #d97706 100%)',
+    link: '/docs/category/getting-started',
+    type: 'Beginner'
   },
   {
-    title: 'Docusaurus Expert Agent',
-    description: 'Specialized Agent',
-    details: 'Master the documentation specialist agent. Learn to automate docs generation, configure advanced settings, and integrate with your development workflow.',
-    gradient: 'linear-gradient(135deg, #2d2d2d 0%, #fb923c 100%)',
-    link: '/docs/subagents/docusaurus-expert',
-    type: 'Module 2'
+    title: 'Output Styles',
+    description: 'Customization & Formatting',
+    details: 'Master custom output formatting and create personalized response styles for your Claude Code interactions.',
+    gradient: 'linear-gradient(135deg, #2d2d2d 0%, #ea580c 100%)',
+    link: '/docs/category/build-with-claude-code',
+    type: 'Beginner'
   },
   {
     title: 'Hooks',
     description: 'Event-Driven Automation',
-    details: 'Discover how to create powerful hooks that respond to Claude Code events. Build custom automation workflows and integrate with external services.',
-    gradient: 'linear-gradient(135deg, #374151 0%, #fdba74 100%)',
-    link: '/docs/hooks/overview',
-    type: 'Module 3'
+    details: 'Create powerful hooks that respond to Claude Code events and automate your development workflows.',
+    gradient: 'linear-gradient(135deg, #374151 0%, #f59e0b 100%)',
+    link: '/docs/category/build-with-claude-code',
+    type: 'Intermediate'
   },
   {
-    title: 'Discord Notification Hook',
-    description: 'Team Communication',
-    details: 'Build a practical Discord notification system. Learn to create hooks that send real-time updates to your team when agents complete tasks.',
+    title: 'MCP Servers',
+    description: 'Advanced Integration',
+    details: 'Build and integrate Model Context Protocol servers to extend Claude Code capabilities with custom tools.',
     gradient: 'linear-gradient(135deg, #4b5563 0%, #fbbf24 100%)',
-    link: '/docs/hooks/discord-notification-hook',
-    type: 'Module 4'
+    link: '/docs/category/build-with-claude-code',
+    type: 'Intermediate'
   },
   {
-    title: 'CI/CD Workflow',
-    description: 'Complete Integration',
-    details: 'Combine everything into a production-ready CI/CD pipeline. Automate documentation updates and team notifications with GitHub Actions.',
-    gradient: 'linear-gradient(135deg, #6b7280 0%, #f59e0b 100%)',
-    link: '/docs/workflows/cicd-workflow',
-    type: 'Module 5'
+    title: 'GitHub Actions',
+    description: 'CI/CD Automation',
+    details: 'Integrate Claude Code into your CI/CD pipeline with GitHub Actions for automated workflows.',
+    gradient: 'linear-gradient(135deg, #1e293b 0%, #10b981 100%)',
+    link: '/docs/category/build-with-claude-code',
+    type: 'Advanced'
+  },
+  {
+    title: 'Production Deployment',
+    description: 'Enterprise Scale',
+    details: 'Deploy Claude Code in production environments with Amazon Bedrock, Vertex AI, and enterprise security.',
+    gradient: 'linear-gradient(135deg, #0f172a 0%, #06b6d4 100%)',
+    link: '/docs/category/deployment',
+    type: 'Advanced'
   },
 ];
 
@@ -84,13 +92,18 @@ export default function HomepageFeatures(): ReactNode {
             Start Your Claude Code Journey
           </Heading>
           <p className={styles.sectionSubtitle}>
-            Take our progressive courses and master Claude Code step by step. More advanced courses coming soon!
+            Explore individual modules and dive deep into the topics that matter most to you
           </p>
         </div>
         <div className={styles.featuresGrid}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+        <div className={styles.viewAllContainer}>
+          <Link to="/docs" className={styles.viewAllButton}>
+            View All Modules →
+          </Link>
         </div>
       </div>
     </section>

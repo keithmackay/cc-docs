@@ -84,11 +84,60 @@ const config: Config = {
     },
     navbar: {
       title: '$ Claude Code Templates',
-      items: [],
+      items: [
+        {
+          href: 'https://aitmpl.com',
+          label: 'Download Components',
+          position: 'right',
+        },
+      ],
     },
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Claude Code Templates',
+              href: 'https://aitmpl.com',
+            },
+            {
+              label: 'Academy',
+              to: '/',
+            },
+            {
+              label: 'Documentation',
+              to: '/docs',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/davila7/claude-code-templates',
+            },
+            {
+              label: 'Contribute',
+              href: 'https://github.com/davila7/claude-code-templates/blob/main/CONTRIBUTING.md',
+            },
+          ],
+        },
+        {
+          title: 'Official Docs',
+          items: [
+            {
+              label: 'Claude Code Documentation',
+              href: 'https://docs.claude.com/en/docs/claude-code',
+            },
+            {
+              label: 'Anthropic',
+              href: 'https://www.anthropic.com',
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Claude Code Templates. Open Source Project. Built with Docusaurus.`,
     },
