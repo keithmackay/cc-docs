@@ -52,6 +52,12 @@ export default function ContentGate({ courseId, moduleId, children }: ContentGat
   }
 
   if (!user) {
+    // Redirect to auth page with current location as redirect parameter
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname;
+      window.location.href = `/auth?redirect=${encodeURIComponent(currentPath)}`;
+    }
+
     return (
       <div className={styles.gate}>
         <div className={styles.lockIcon}>
@@ -59,11 +65,8 @@ export default function ContentGate({ courseId, moduleId, children }: ContentGat
             <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
           </svg>
         </div>
-        <h2>Sign in to Continue</h2>
-        <p>Please sign in to access this content.</p>
-        <a href="/profile" className={styles.upgradeButton}>
-          Sign In
-        </a>
+        <h2>Redirecting to sign in...</h2>
+        <p>Please wait while we redirect you to the authentication page.</p>
       </div>
     );
   }
