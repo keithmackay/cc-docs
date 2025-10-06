@@ -221,20 +221,6 @@
   }
 }
 
-/* Future Methods Placeholder */
-.futureMethodsPlaceholder {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background: var(--terminal-bg-primary);
-  border: 1px dashed var(--terminal-border-secondary);
-  border-radius: 4px;
-}
-
-.commentLine {
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-}
-
 /* Auth Footer */
 .authFooter {
   border-top: 1px solid var(--terminal-border-primary);

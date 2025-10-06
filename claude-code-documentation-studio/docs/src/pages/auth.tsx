@@ -83,24 +83,11 @@ export default function AuthPage() {
                 </span>
                 <span className={styles.buttonCursor}>_</span>
               </button>
-
-              {/* Placeholder for future auth methods */}
-              <div className={styles.futureMethodsPlaceholder}>
-                <div className={styles.commentLine}>
-                  <span className={styles.comment}># More authentication methods coming soon...</span>
-                </div>
-                <div className={styles.commentLine}>
-                  <span className={styles.comment}># - Google OAuth</span>
-                </div>
-                <div className={styles.commentLine}>
-                  <span className={styles.comment}># - Email/Password</span>
-                </div>
-              </div>
             </div>
 
             <div className={styles.authFooter}>
               <p className={styles.footerText}>
-                <span className={styles.footerPrompt}>→</span> Free plan automatically assigned on sign-up
+                <span className={styles.footerPrompt}>→</span> Create your account in seconds
               </p>
               <p className={styles.footerText}>
                 <span className={styles.footerPrompt}>→</span> Access all documentation and tutorials
