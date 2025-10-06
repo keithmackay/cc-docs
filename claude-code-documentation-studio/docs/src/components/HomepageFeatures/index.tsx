@@ -59,7 +59,7 @@ const FeatureList: FeatureItem[] = [
     description: 'Introduction',
     details: 'Start your journey with Claude Code and learn the basics to get up and running quickly.',
     gradient: 'linear-gradient(135deg, #0f172a 0%, #06b6d4 100%)',
-    link: '/docs/intro',
+    link: '/docs',
     type: 'Beginner'
   },
 ];

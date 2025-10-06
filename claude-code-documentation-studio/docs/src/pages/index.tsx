@@ -39,7 +39,7 @@ function ChooseYourPath() {
         'IDE Integration Basics',
         'First AI Workflows'
       ],
-      link: '/docs/category/getting-started',
+      link: '/docs',
       color: '#d97706'
     },
     {
@@ -52,7 +52,7 @@ function ChooseYourPath() {
         'Workflow Optimization',
         'Team Collaboration'
       ],
-      link: '/docs/category/build-with-claude-code',
+      link: '/docs/hooks/overview',
       color: 'var(--terminal-text-warning)'
     },
     {
@@ -65,7 +65,7 @@ function ChooseYourPath() {
         'CI/CD Integration',
         'Cost & Performance Monitoring'
       ],
-      link: '/docs/category/deployment',
+      link: '/docs/workflows/cicd-workflow',
       color: '#10b981'
     }
   ];
