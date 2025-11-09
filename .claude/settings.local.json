@@ -1,15 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-docusaurus:*)",
-      "Bash(rm:*)",
-      "Read(//var/folders/r4/mykdhct5247dlp3mr7h5488m0000gn/T/TemporaryItems/NSIRD_screencaptureui_QTiGj1/**)",
-      "Read(//var/folders/r4/mykdhct5247dlp3mr7h5488m0000gn/T/TemporaryItems/NSIRD_screencaptureui_2qS9YL/**)",
-      "Bash(mkdir:*)",
-      "Bash(tree:*)",
-      "Bash(git add:*)",
-      "Bash(git push:*)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nAdd complete membership and admin panel system\n\nFeatures:\n- Two-tier membership system (Free/Pro)\n- Free plan: Access to Subagents module only\n- Pro plan: Full access to all modules ($29.99/month, $299.99/year)\n- Auto-assign free plan to new users via Supabase trigger\n\nAdmin Panel (/admin):\n- Secure access control with email whitelist\n- Resource Management: Toggle module access for Free/Pro plans\n- User Management: View all users, memberships, and progress\n- Protected by RLS policies and admin verification functions\n\nContent Protection:\n- ContentGate component restricts access based on membership\n- Pro badge icons in sidebar for premium modules\n- Upgrade prompts for locked content\n\nMembership Page (/membership):\n- Plan comparison with monthly/yearly billing toggle\n- Feature lists and pricing display\n- Manage subscription button\n\nProfile Page Updates:\n- Display current membership plan and status\n- Billing cycle and renewal date\n- Manage Membership button linking to /membership\n\nDatabase:\n- Complete Supabase schema with RLS policies\n- Admin functions: is_admin(), check_is_admin(), get_all_users_admin()\n- Access control functions: user_has_course_access(), user_has_module_access()\n- Setup documentation in supabase/README.md\n\n🤖 Generated with Claude Code\nEOF\n)\")"
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

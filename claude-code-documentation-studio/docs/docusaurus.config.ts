@@ -86,6 +86,11 @@ const config: Config = {
       title: '$ Claude Code Templates',
       items: [
         {
+          to: '/my-components',
+          label: 'My Components',
+          position: 'right',
+        },
+        {
           href: 'https://aitmpl.com',
           label: 'Download Components',
           position: 'right',

@@ -8,3 +8,20 @@
     max-width: 75% !important;
   }
 }
+
+/* Video Lesson Container */
+.videoLessonContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.videoLessonContainer article {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .videoLessonContainer {
+    padding: 1rem 0;
+  }
+}

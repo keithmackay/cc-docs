@@ -13,6 +13,7 @@ import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import ContentVisibility from '@theme/ContentVisibility';
 import type {Props} from '@theme/DocItem/Layout';
 import ContentGate from '../../../components/Membership/ContentGate';
+import VideoLesson from '../../../components/VideoLesson/VideoLesson';
 
 import styles from './styles.module.css';
 
@@ -48,6 +49,46 @@ export default function DocItemLayout({children}: Props): ReactNode {
   const courseId = frontMatter.courseId || 'docs';
   const moduleId = frontMatter.moduleId;
 
+  // Check if this is a video lesson
+  const isVideoLesson = frontMatter.videoUrl;
+  const videoType = frontMatter.videoType || 'youtube';
+  const nextLesson = frontMatter.nextLesson;
+  const duration = frontMatter.duration;
+
+  // Video lesson layout - with sidebar visible
+  if (isVideoLesson) {
+    const videoContent = (
+      <div className="row">
+        <div className={clsx('col', styles.docItemCol)}>
+          <ContentVisibility metadata={metadata} />
+          <DocVersionBanner />
+          <div className={styles.docItemContainer}>
+            <article>
+              <DocBreadcrumbs />
+              <DocVersionBadge />
+              <VideoLesson
+                videoUrl={frontMatter.videoUrl}
+                videoType={videoType}
+                nextLesson={nextLesson}
+                duration={duration}
+              />
+              <DocItemContent>{children}</DocItemContent>
+              <DocItemFooter />
+            </article>
+            <DocItemPaginator />
+          </div>
+        </div>
+      </div>
+    );
+
+    return (
+      <ContentGate courseId={courseId} moduleId={moduleId}>
+        {videoContent}
+      </ContentGate>
+    );
+  }
+
+  // Regular text lesson layout with TOC
   const content = (
     <div className="row">
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>

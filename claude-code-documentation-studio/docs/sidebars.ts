@@ -25,6 +25,7 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: '🤖 Subagents',
           items: [
+            'subagents/introduction-video',
             'subagents/overview',
             'subagents/docusaurus-expert'
           ],

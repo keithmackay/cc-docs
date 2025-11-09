@@ -1,0 +1,81 @@
+{
+  "userId": "user-demo-001",
+  "stats": {
+    "componentsSaved": 8,
+    "stacksCreated": 4,
+    "totalUsageCount": 82,
+    "favoriteComponentType": "agent",
+    "mostUsedComponent": {
+      "id": "comp-007",
+      "name": "React Component Template",
+      "usageCount": 23
+    },
+    "memberSince": "2025-01-01T00:00:00Z",
+    "lastActive": "2025-01-08T15:40:00Z",
+    "totalTimeActive": 18450,
+    "componentsByType": {
+      "agent": 4,
+      "hook": 1,
+      "command": 1,
+      "setting": 1,
+      "mcp": 1,
+      "template": 1
+    },
+    "usageByType": {
+      "agent": 34,
+      "hook": 8,
+      "command": 6,
+      "setting": 1,
+      "mcp": 10,
+      "template": 23
+    },
+    "topTags": [
+      { "tag": "react", "count": 2 },
+      { "tag": "documentation", "count": 2 },
+      { "tag": "typescript", "count": 1 },
+      { "tag": "code-review", "count": 1 },
+      { "tag": "ci-cd", "count": 1 }
+    ],
+    "recentActivity": [
+      {
+        "type": "component_used",
+        "componentId": "comp-007",
+        "componentName": "React Component Template",
+        "timestamp": "2025-01-08T15:40:00Z"
+      },
+      {
+        "type": "component_used",
+        "componentId": "comp-001",
+        "componentName": "Docusaurus Expert",
+        "timestamp": "2025-01-08T14:20:00Z"
+      },
+      {
+        "type": "component_used",
+        "componentId": "comp-003",
+        "componentName": "Code Review Agent",
+        "timestamp": "2025-01-08T11:30:00Z"
+      },
+      {
+        "type": "component_used",
+        "componentId": "comp-006",
+        "componentName": "Supabase MCP Server",
+        "timestamp": "2025-01-08T10:15:00Z"
+      },
+      {
+        "type": "component_saved",
+        "componentId": "comp-004",
+        "componentName": "Terminal Dark Theme",
+        "timestamp": "2025-01-07T11:45:00Z"
+      }
+    ],
+    "weeklyActivity": [
+      { "day": "Mon", "usageCount": 8 },
+      { "day": "Tue", "usageCount": 12 },
+      { "day": "Wed", "usageCount": 15 },
+      { "day": "Thu", "usageCount": 10 },
+      { "day": "Fri", "usageCount": 14 },
+      { "day": "Sat", "usageCount": 5 },
+      { "day": "Sun", "usageCount": 3 }
+    ]
+  }
+}

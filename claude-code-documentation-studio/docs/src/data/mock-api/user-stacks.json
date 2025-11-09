@@ -1,0 +1,62 @@
+{
+  "userId": "user-demo-001",
+  "stacks": [
+    {
+      "id": "stack-001",
+      "name": "Documentation Toolkit",
+      "description": "Essential components for building and maintaining documentation sites with Docusaurus and automated workflows",
+      "components": [
+        "comp-001",
+        "comp-002",
+        "comp-007"
+      ],
+      "visibility": "private",
+      "createdAt": "2025-01-05T10:30:00Z",
+      "updatedAt": "2025-01-07T11:45:00Z",
+      "usageCount": 15
+    },
+    {
+      "id": "stack-002",
+      "name": "Full-Stack Development",
+      "description": "Complete stack for building modern web applications with React frontend and Supabase backend",
+      "components": [
+        "comp-001",
+        "comp-003",
+        "comp-006",
+        "comp-008"
+      ],
+      "visibility": "private",
+      "createdAt": "2025-01-03T13:20:00Z",
+      "updatedAt": "2025-01-08T10:15:00Z",
+      "usageCount": 28
+    },
+    {
+      "id": "stack-003",
+      "name": "DevOps & CI/CD",
+      "description": "Automation tools for continuous integration, deployment, and code quality checks",
+      "components": [
+        "comp-003",
+        "comp-005"
+      ],
+      "visibility": "private",
+      "createdAt": "2025-01-04T16:30:00Z",
+      "updatedAt": "2025-01-06T09:20:00Z",
+      "usageCount": 12
+    },
+    {
+      "id": "stack-004",
+      "name": "UI/UX Essentials",
+      "description": "Components and templates for building beautiful, accessible user interfaces",
+      "components": [
+        "comp-004",
+        "comp-007"
+      ],
+      "visibility": "private",
+      "createdAt": "2025-01-02T10:00:00Z",
+      "updatedAt": "2025-01-07T11:50:00Z",
+      "usageCount": 8
+    }
+  ],
+  "total": 4,
+  "lastUpdated": "2025-01-08T15:40:00Z"
+}
